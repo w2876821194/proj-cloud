@@ -1,0 +1,26 @@
+server:
+  port: 20000
+
+spring:
+  application:
+    name: restroom-service
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.1:9011
+        username: nacos
+        password: nacos
+        heart-beat-interval: 5000 # 心跳间隔时间
+        heart-beat-timeout: 15000 # 服务器剔除时间(标记为不健康),默认15s
+      config:
+        server-addr: 192.168.92.1:9011
+        username: nacos
+        password: nacos
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - data-id: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            refresh: true

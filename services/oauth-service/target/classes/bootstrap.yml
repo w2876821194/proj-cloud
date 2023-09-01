@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: oauth-service
+  redis:
+    host: 192.168.92.1
+    port: 6379
+    database: 0
+  sleuth:
+    sample:
+      # 采样率
+      probability: 1
+      # 每秒最多采样100个trace
+      rate: 100
+  zipkin:
+    sender:
+      type: rabbit
+    rabbitmq:
+      addresses: 127.0.0.1:5672
+      queue: zipkin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.1:9011
+        username: nacos
+        password: nacos
+      config:
+        server-addr: 192.168.92.1:9011
+        username: nacos
+        password: nacos
+server:
+  port: 23000

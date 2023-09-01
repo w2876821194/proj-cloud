@@ -1,0 +1,30 @@
+spring:
+  redis:
+    host: 192.168.92.1
+    port: 6379
+    database: 0
+#    password:
+  cloud:
+    loadbalancer:
+#      ribbon:
+#        enabled: false
+#      discovery:
+#        enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+# zipkin集成
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enable: false
+
+server:
+  port: 30004

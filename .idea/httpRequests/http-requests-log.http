@@ -1,0 +1,38 @@
+GET http://localhost:21000/employee/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+# @no-cookie-jar
+GET http://localhost:21000/employee/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:21000/employee/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=EE0FA91B71877CBB8FAB0B0D63296AE4
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:21000/employee/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Cookie: JSESSIONID=5BDC700528174AE12A52A7326474E48D
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:21000/employee/test
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+

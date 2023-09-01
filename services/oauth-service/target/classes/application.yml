@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.92.1:8718
+        client-ip: 192.168.92.1 # 防止sentinel抓取虚拟ip
+        port: 8719
+      datasource:
+        flow:
+          nacos:
+            server-addr: 192.168.92.1:9011
+            username: nacos
+            password: nacos
+            groupId: SENTINEL_GROUP
+            dataId: ${spring.application.name}-flow-rules
+            rule-type: flow
